@@ -27,7 +27,7 @@ def basic():
         recommend_workout = mbti_wo.get_random_workout(user_mbti)   # 운동 추천
         recommend_movie, reason = mbti_mv.recommend_movie(user_mbti)    # 영화 추천
 
-        st.write(f"""
+        st.markdown(f"""
     ************************************************************************
 
     당신의 MBTI는 {user_mbti}네요.
