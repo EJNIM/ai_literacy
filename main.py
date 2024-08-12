@@ -1,6 +1,7 @@
 import streamlit as st
 import electric_car_0805 as ec
 import pybasic_0808 as pb
+import Project0715 as pj
 
 # 로그인 화면
 st.sidebar.title('로그인')
@@ -11,7 +12,7 @@ if user_id == 'abc' and user_pw == '1234':
     st.sidebar.title('▷EJ의 포트폴리오◁')
     # st.image('모지스 웨딩.jpg')
 
-    menu = st.sidebar.radio('메뉴선택',['파이썬 기초','탐색적 분석 : 전기자동차', '머신러닝'],index=None)
+    menu = st.sidebar.radio('메뉴선택',['파이썬 기초','탐색적 분석 : 전기자동차', '머신러닝','파이썬 기초 미니 프로젝트'],index=None)
     st.sidebar.write(menu)
 
     if menu == '탐색적 분석 : 전기자동차':
@@ -20,3 +21,5 @@ if user_id == 'abc' and user_pw == '1234':
         st.header('공사중')
     elif menu == '파이썬 기초':
         pb.basic()
+    elif menu == '파이썬 기초 미니 프로젝트':
+        pj.basic()
