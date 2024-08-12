@@ -14,7 +14,7 @@ def basic():
     MBTI에 맞게 당신만을 위해 준비했으니, 당신의 MBTI를 먼저 입력해주세요~
     """)
 
-    user_mbti = st.text_input('MBTI 입력', value='INFP',max_chars=4)  # MBTI 입력받기
+    user_mbti = st.text_input('MBTI 입력', value='',max_chars=4)  # MBTI 입력받기
     user_mbti = user_mbti.upper()   # 입력한 MBTI를 모두 대문자로 바꾸기
 
     # MBTI를 제대로 입력했는지 확인
@@ -23,6 +23,7 @@ def basic():
 
     if user_mbti in mbti_list:
 
+        st.subheader('===CHECK IT OUT===')
         recommend_food = mbti_fd.re_food(user_mbti)   # 음식 추천
         recommend_workout = mbti_wo.get_random_workout(user_mbti)   # 운동 추천
         recommend_movie, reason = mbti_mv.recommend_movie(user_mbti)    # 영화 추천
